@@ -1,0 +1,57 @@
+@model WebApplication1.Models.Course
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Course</h4>
+    <hr />
+    <div class="row">
+        <div class="col-2">
+            <b>@Html.DisplayNameFor(model => model.CourseName)</b>
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.CourseName)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <b>@Html.DisplayNameFor(model => model.CourseDescription)</b>
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.CourseDescription)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <b>@Html.DisplayNameFor(model => model.CourseCredit)</b>
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.CourseCredit)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <b>@Html.DisplayNameFor(model => model.CourseLecturer)</b>
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.CourseLecturer)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <b>@Html.DisplayNameFor(model => model.CourseGradeType)</b>
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.CourseGradeType)
+        </div>
+    </div>
+</div>
+<hr />
+<div>
+    <a asp-action="Index" class="btn btn-outline-success"><< Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.CourseId" class="btn btn-warning">Edit</a>
+</div>

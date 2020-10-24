@@ -1,0 +1,25 @@
+﻿@model WebApplication1.Models.Product
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+<h1>Add Product</h1>
+<form method="POST" asp-action="AddProduct" asp-controller="Home">
+    <label asp-for="ProductName"></label>
+    <input class="form-control" asp-for="ProductName" />
+
+    <label asp-for="ProductCategory"></label>
+    <input class="form-control" asp-for="ProductCategory" />
+
+    <label asp-for="ProductSupplier"></label>
+    <input class="form-control" asp-for="ProductSupplier" />
+
+    <label asp-for="ProductPrice"></label>
+    <input class="form-control" asp-for="ProductPrice" />
+
+    <label asp-for="ProductStockQuantity"></label>
+    <input class="form-control" asp-for="ProductStockQuantity" />
+
+    <button type="submit" class="btn btn-success">Add</button>
+</form>
+

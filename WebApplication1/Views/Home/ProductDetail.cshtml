@@ -1,0 +1,11 @@
+﻿@model WebApplication1.Models.Product
+@{
+    ViewData["Title"] = "Product Detail";
+}
+
+<h1>Product: @Model.ProductName</h1>
+
+<div>Price: @Model.ProductPrice</div>
+<div>Category: @Model.ProductCategory</div>
+<div>Supplier: @Model.ProductSupplier</div>
+<div>Stock: @Model.ProductStockQuantity</div>

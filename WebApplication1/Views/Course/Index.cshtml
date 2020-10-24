@@ -1,0 +1,59 @@
+@model IEnumerable<WebApplication1.Models.Course>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Course List</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseCredit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseLecturer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseGradeType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach (var item in Model) {
+         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseCredit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseLecturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseGradeType)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.CourseId" class="btn btn-sm btn-primary">Details</a>
+                <a asp-action="Edit" asp-route-id="@item.CourseId" class="btn btn-sm btn-warning">Edit</a>
+                <a asp-action="Delete" asp-route-id="@item.CourseId" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+         </tr>
+       }
+    </tbody>
+</table>
